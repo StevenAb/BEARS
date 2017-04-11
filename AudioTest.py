@@ -24,8 +24,8 @@ while True:
         os.system('arecord -D plughw:1,0 -d 5.0 speak.wav')
         print ('Retrieving Transcript')
         url = 'https://stream.watsonplatform.net/speech-to-text/api/v1/recognize?model=en-US_NarrowbandModel&continuous=true&'
-        username = 'd1dfc1fa-296b-42e3-b270-dc986716ae81'
-        password = 'ocNLsfGfVLgv'
+        username = 'USERNAME'
+        password = 'PASSWORD'
 
         headers = {"Content-Type": 'audio/wav'}
 
