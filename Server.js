@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 
-MongoClient.connect('mongodb://stephanie_almeida:Saggi1212@ds163377.mlab.com:63377/bears-senior-project', (err, database) => {
+MongoClient.connect('mongodb://USERNAME:PASSWORD@ds163377.mlab.com:63377/bears-senior-project', (err, database) => {
 	if (err)
 		return console.log(err);
 	app.locals.db = database;
