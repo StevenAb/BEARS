@@ -1,28 +1,33 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		
 		<title>BEARS</title>
 
-		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="views/src/font-awesome.css">
+		<script src="https://use.fontawesome.com/26aebfa83b.js"></script>
 		
 	</head>
 	<body>
 	
 		<nav class="bigbluefish">
 			<div>
-				<a id="name" href="main.html">BEARS</a>
-				<a id="signup" href="signup.html">Sign Up</a>
+				<a id="name" href="/">BEARS</a>
+				<a id="signup" href="login.html">Log Out</a>
+                <form name="submit" action="/delete" method="post">
+                    <input id="submit" href="/" type="button" value="Delete All Transcripts" style="float: right">
+<!--                    <a id="" href="/"><input id="Delete All Transcripts" type="submit"></a>-->
+                </form>
 			</div>
 		</nav>
 		
-		<div class="login bigbluefish">
-			<h1>Login</h1>
-			<form>
-				<input class="text" id="user" type="text" placeholder="Username"><br>
-				<input class="text" id="pass" type="text" placeholder="Password"><br>
-				<input id="submit" type="submit">
-			</form>
+		<div id="head">
+			<h1>Transcripts</h1>
+		</div>
+		
+		<div id="refresh">
+			<a id="re" href="/"><i class="fa fa-repeat" aria-hidden="true"></i></a>
 		</div>
 		
 	</body>
