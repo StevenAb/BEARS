@@ -5,24 +5,41 @@
 		<title>BEARS</title>
 
 		<link rel="stylesheet" href="styles/main.css">
+        <script>
+        
+            function validateForm() {
+                var x = document.forms["signup"]["pass"].value;
+                var y = document.forms["signup"]["pass2"].value;
+                if (x == y) {
+                    return true;
+                }
+                else {
+                    alert("Passwords must match!");
+                    return false;
+                }
+            }
+        </script>
 		
 	</head>
 	<body>
 	
 		<nav class="bigbluefish">
 			<div>
-				<a id="name" href="main.html">BEARS</a>
+				<a id="name">BEARS</a>
 				<a id="signup" href="login.html">Login</a>
 			</div>
 		</nav>
 		
 		<div class="signup bigbluefish">
 			<h1>Sign Up</h1>
-			<form>
-				<input class="text" id="user" type="text" placeholder="Username"><br>
-				<input class="text" id="pass2" type="text" placeholder="Password"><br>
-				<input class="text" id="pass" type="text" placeholder="Comfirm Password"><br>
-				<input id="submit" type="submit">
+			<form onsubmit="return validateForm()" name="signup" action="/addusers" method="POST">
+				<input class="text" id="user" type="text" placeholder="Username" name="user" required><br>
+				<input class="text" id="pass" type="password" placeholder="Password" name="pass" required><br>
+				<input class="text" id="pass2" type="password" placeholder="Comfirm Password" name="pass2" required><br>
+                <form action="/">
+                    <a id="submit" href="/"><input id="submit" type="submit"></a>
+                </form>
+                
 			</form>
 		</div>
 		
